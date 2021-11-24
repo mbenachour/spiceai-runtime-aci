@@ -13,7 +13,7 @@ jobs:
       # create a new workspace
       - name: Create runtime
         id: spiceai-runtime
-        uses: ./
+        uses: mbenachour/spiceai-runtime-aci@v3
         with:
           azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
           resource_group: 'spiceai-runtime'
