@@ -1,4 +1,4 @@
-name: "Spiceai Runtime ACA"
+name: "Spiceai Runtime ACI"
 description: "deploy a Spiceai runtime with this GitHub Action"
 author: "me@mohamedbenachour.net"
 inputs:
