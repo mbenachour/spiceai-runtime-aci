@@ -72,6 +72,35 @@ Please follow [this link](https://help.github.com/en/actions/configuring-and-man
 
 
 
+### 2. example of usage :
+
+```sh
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Out Repository
+        id: checkout_repository
+        uses: actions/checkout@v2
+        with:
+          ref: ${{github.ref}}
+
+      # create a new workspace
+      - name: Create ACA
+        id: spiceai-runtime
+        uses: mbenachour/spiceai-runtime-aci@v1
+        with:
+          azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+          resource_group: 'spiceai-runtime'
+          dns_name: 'spaiceai-aci-1'
+
+
+
+```
+
+
+
 github action to create spiceai runtime in azure container instances  
 
 `az group create --name {resource-group} --location {location}`
