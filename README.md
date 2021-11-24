@@ -1,7 +1,7 @@
 # spiceai-runtime-aci
 
 
-## Usage
+## Description
 
 The spiceai-runtime-azure action will create spiceai runtime in azure container instance
 
@@ -38,6 +38,10 @@ open a terminal and run  :
 
 # login to azure 
 az login 
+
+#create resource group 
+az group create --name {resource-group} --location {location}
+
 
 # Replace {service-principal-name}, {subscription-id} and {resource-group} with your 
 # Azure subscription id and resource group name and any name for your service principle
@@ -100,16 +104,6 @@ jobs:
 ```
 
 
-
-github action to create spiceai runtime in azure container instances  
-
-`az group create --name {resource-group} --location {location}`
-
-
-`az ad sp create-for-rbac --name {service-principal-name} \`
-                         `--role contributor \`
-                         `--scopes /subscriptions/{subscription-id}/resourceGroups/{resource-group} \`
-                         `--sdk-auth`
 
 
 
