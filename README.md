@@ -20,14 +20,14 @@ This repository contains a GitHub Action for creating a [spiceai]() runtime, You
 
 github action to create spiceai runtime in azure container instances  
 
-az group create --name {resource-group} --location {location}
+`az group create --name {resource-group} --location {location}`
 
 
-az ad sp create-for-rbac --name {service-principal-name} \
-                         --role contributor \
-                         --scopes /subscriptions/{subscription-id}/resourceGroups/{resource-group} \
-                         --sdk-auth
+`az ad sp create-for-rbac --name {service-principal-name} \`
+                         `--role contributor \`
+                         `--scopes /subscriptions/{subscription-id}/resourceGroups/{resource-group} \`
+                         `--sdk-auth`
 
-put creds in secrets
+    
 
 
