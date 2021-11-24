@@ -1,0 +1,23 @@
+name: "Spiceai Runtime ACI"
+description: "deploy a Spiceai runtime with this GitHub Action"
+author: "me@mohamedbenachour.net"
+inputs:
+  azure_credentials:
+    description: "Paste output of `az ad sp create-for-rbac --name <your-sp-name> --role contributor --scopes /subscriptions/<your-subscriptionId>/resourceGroups/<your-rg> --sdk-auth` as value of secret variable: AZURE_CREDENTIALS"
+    required: true
+  resource_group:
+    description: "Resource Group"
+    required: true 
+  dns_name:
+    description: "DNS Name for ACI instance"
+    required: true
+outputs:
+  fqdn:
+    description: "the fqdn of the spcieai runtime"
+
+branding:
+  icon: chevron-up
+  color: "blue"
+runs:
+  using: "docker"
+  image: "Dockerfile"

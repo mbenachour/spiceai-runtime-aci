@@ -1,0 +1,22 @@
+name: Integration Test
+on: [push , pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Out Repository
+        id: checkout_repository
+        uses: actions/checkout@v2
+        with:
+          ref: ${{github.ref}}
+
+      # create a new workspace
+      - name: Create runtime
+        id: spiceai-runtime
+        uses: ./
+        with:
+          azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+          resource_group: 'spiceai-runtime'
+          dns_name: 'spaiceai-aci-1'
+      - name: display fqdn of spiceai runtime
+        run: echo "fqdn is ${{ steps.spiceai-runtime.outputs.dns_name }}"
