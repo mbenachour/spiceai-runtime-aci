@@ -63,7 +63,7 @@ this will generate a service principal :
 Add this JSON output as [a secret](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets#creating-encrypted-secrets) with the name `AZURE_CREDENTIALS` in your GitHub repository:
 
 <p align="center">
-  <img src="docs/images/secrets.png" alt="GitHub Template repository" width="700"/>
+  <img src="docs/secrets.png" alt="GitHub Template repository" width="700"/>
 </p>
 
 To do so, click on the Settings tab in your repository, then click on Secrets and finally add the new secret with the name `AZURE_CREDENTIALS` to your repository.
